@@ -6,6 +6,8 @@ int main(int argc, char const *argv[])
     int N ;
     int Arre [1000];
     int Pro;
+    int A_pro = 0;
+    int No_pro = 0;
     int i;
     int C;
     int S;
@@ -20,13 +22,24 @@ for (i=1; i <= N; i++)
 
     Arre[i-1] = C; 
     S = S + C;
+    if ( C >= 6)
+    {
+        A_pro = A_pro + 1; 
+    }
+    else{
+        No_pro = No_pro + 1;
+    }
+    
 }
 ///////////\\\\PROMEDIO/////\\\\\\\\\\
 
 Pro = S / N ;
 printf("\nPromedio general del grupo:  %d\n",Pro);
 
+///////////\\\\Apro y N apro/////\\\\\\\\\\
 
+printf("\nNumero de alumnos Aprobados: %d\n",A_pro);
+printf("\nNumero de alumnos No aprobados: %d\n",No_pro);
 
     return 0;
 }
