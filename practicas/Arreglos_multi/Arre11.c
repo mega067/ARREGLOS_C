@@ -5,7 +5,8 @@ int main(int argc, char const *argv[])
 {
     float A [10][20];
     float B [10][20];
-    float c;
+    float C [10][20];
+
 
     int M = 0; //FILAS
     int N = 0; //COLUMNAS
@@ -42,6 +43,33 @@ int main(int argc, char const *argv[])
         }
         
     }
+
+    for(int i3=0; i3 < M; i3++){
+        for(int j3=0; j3 < N; j3++){
+            C[i3][j3] = A[i3][j3] + B[i3][j3];
+        }
+    }
+
+    printf("----------------------------------- \n");
+    printf("ARREGLO C (SUMA DE A + B) \n");
+    for(int i4=0; i4 < N; i4++){
+        for(int j4=0; j4 < M; j4++){   
+            printf("A[%d][%d] + B[%d][%d] = %f \n", i4, j4, i4, j4, C[i4][j4]);
+             printf("\n");
+            }
+        }
+    printf("----------------------------------- \n");
+    printf("ARREGLO RESULTANTE C \n");
+   
+    for(int i5=0; i5 < N; i5++){
+        
+        for(int j5=0; j5 < M; j5++){
+            printf("|%f|",C[i5][j5]);
+        }
+    printf("\n");
+    }
+
+
 
 
 
